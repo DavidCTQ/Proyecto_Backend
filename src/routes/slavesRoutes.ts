@@ -10,6 +10,14 @@ import {
 const router = Router();
 /**
  * @swagger
+ * tags:
+ *   name: Slaves
+ *   description: CRUD relacionado con esclavos
+ */
+
+/**
+/**
+ * @swagger
  * /api/slaves:
  *  get:
  *    summary: Obtener todos los esclavos | Cuchau | 
