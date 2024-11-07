@@ -10,7 +10,7 @@ import {
 const router = Router();
 /**
  * @swagger
- * /api/products:
+ * /api/slaves:
  *  get:
  *    summary: Obtener todos los esclavos | Cuchau | 
  *    responses:
