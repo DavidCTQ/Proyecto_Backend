@@ -24,7 +24,7 @@ const router = Router();
  *      200:
  *        description: Lista de Esclavos
  */
-router.get("slaves/", getAllSlaves);
+router.get("/", getAllSlaves);
 /**
  * @swagger
  * /api/slaves/{id}:
@@ -44,7 +44,7 @@ router.get("slaves/", getAllSlaves);
  *       404:
  *         description: Esclavo no encontrado
  */
-router.get("slaves/:id", getSlaveByID);
+router.get("/:id", getSlaveByID);
 /**
  * @swagger
  * /api/slaves:
@@ -80,7 +80,7 @@ router.get("slaves/:id", getSlaveByID);
  *       500:
  *         description: Error en el servidor
  */
-router.post("slaves/", createSlave);
+router.post("/", createSlave);
 /**
  * @swagger
  * /api/slaves/{id}:
@@ -119,7 +119,7 @@ router.post("slaves/", createSlave);
  *       500:
  *         description: Error en el servidor
  */
-router.put("slaves/:id", updateSlave);
+router.put("/:id", updateSlave);
 /**
  * @swagger
  * /api/slaves/{id}:
@@ -141,6 +141,6 @@ router.put("slaves/:id", updateSlave);
  *       500:
  *         description: Error en el servidor
  */
-router.delete("slaves/:id", deleteSlave);
+router.delete("/:id", deleteSlave);
 
 export default router;
