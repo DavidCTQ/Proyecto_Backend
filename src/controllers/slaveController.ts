@@ -41,10 +41,10 @@ export const createSlave = async(req: Request, res: Response) => {
     const { name, price, age, gender, race, imgUrl } = req.body;
     const slave = new Product();
     slave.name = name;
+    slave.race = race;
+    slave.gender = gender;
     slave.age = age;
     slave.price = price;
-    slave.gender = gender;
-    slave.race = race;
     slave.imgUrl = imgUrl;
     await slaveRepository.save(slave);
     res.status(201).json(slave);
@@ -64,10 +64,10 @@ export const updateSlave = async(req: Request, res: Response) => {
     });
     if (slave) {
       slave.name = name ?? slave.name;
+      slave.race = race ?? slave.race;
+      slave.gender = gender ?? slave.gender;
       slave.age = age ?? slave.age;
       slave.price = price ?? slave.price;
-      slave.gender = gender ?? slave.gender;
-      slave.race = race ?? slave.race;
       slave.imgUrl = imgUrl ?? slave.imgUrl;
       await slaveRepository.save(slave); 
       res.json(slave);

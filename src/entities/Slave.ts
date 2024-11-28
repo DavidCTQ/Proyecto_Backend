@@ -5,7 +5,7 @@ export class Product {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column()
+  @Column("text")
   name!: string;
 
   @Column("text")
@@ -14,7 +14,7 @@ export class Product {
   @Column("text")
   gender!: string;
 
-  @Column()
+  @Column("integer")
   age!: number;
 
   @Column("decimal")

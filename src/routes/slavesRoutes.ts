@@ -69,7 +69,7 @@ router.get("/:id", getSlaveByID);
  *               name:
  *                 type: string
  *               age:
- *                 type: string
+ *                 type: number
  *               price:
  *                 type: number
  *               race:
@@ -108,7 +108,7 @@ router.post("/", createSlave);
  *               name:
  *                 type: string
  *               age:
- *                 type: string
+ *                 type: number
  *               price:
  *                 type: number
  *               race:
