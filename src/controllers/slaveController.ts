@@ -38,13 +38,14 @@ export const getSlaveByID = async(req: Request, res: Response) => {
 // v Crear un esclavo (POST) v //
 export const createSlave = async(req: Request, res: Response) => {
   try {
-    const { name, price, age, gender, race } = req.body;
+    const { name, price, age, gender, race, imgUrl } = req.body;
     const slave = new Product();
     slave.name = name;
     slave.age = age;
     slave.price = price;
     slave.gender = gender;
     slave.race = race;
+    slave.imgUrl = imgUrl;
     await slaveRepository.save(slave);
     res.status(201).json(slave);
   } catch(error) {
@@ -57,7 +58,7 @@ export const createSlave = async(req: Request, res: Response) => {
 // v Actualizar un esclavo existente (PUT) v //
 export const updateSlave = async(req: Request, res: Response) => {
   try {
-    const { name, price, age, gender, race } = req.body; 
+    const { name, price, age, gender, race, imgUrl } = req.body; 
     const slave = await slaveRepository.findOneBy({
       id: parseInt(req.params.id)
     });
@@ -67,6 +68,7 @@ export const updateSlave = async(req: Request, res: Response) => {
       slave.price = price ?? slave.price;
       slave.gender = gender ?? slave.gender;
       slave.race = race ?? slave.race;
+      slave.imgUrl = imgUrl ?? slave.imgUrl;
       await slaveRepository.save(slave); 
       res.json(slave);
     } else {

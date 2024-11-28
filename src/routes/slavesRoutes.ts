@@ -64,6 +64,7 @@ router.get("/:id", getSlaveByID);
  *               - price
  *               - race
  *               - gender
+ *               - imgUrl
  *             properties:
  *               name:
  *                 type: string
@@ -74,6 +75,8 @@ router.get("/:id", getSlaveByID);
  *               race:
  *                 type: string
  *               gender:
+ *                 type: string
+ *               imgUrl:
  *                 type: string
  *     responses:
  *       201:
@@ -111,6 +114,8 @@ router.post("/", createSlave);
  *               race:
  *                 type: string
  *               gender:
+ *                 type: string
+ *               imgUrl:
  *                 type: string
  *     responses:
  *       200:
